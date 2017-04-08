@@ -317,12 +317,6 @@
       <DependentUpon>System_User_Update_Form.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
-    <None Include="bin\Debug\chenx.exe.config" />
-    <None Include="bin\Debug\chenx.vshost.exe.config" />
-    <None Include="bin\Debug\Database\DataJson\data.json" />
-    <None Include="bin\Debug\Database\DataJson\Menu.json" />
-    <None Include="bin\Debug\Shared\Config\config.json" />
-    <None Include="bin\Debug\Shared\Config\Images.json" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -334,59 +328,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\BSE.Windows.Forms.dll" />
-    <Content Include="bin\Debug\BSE.Windows.Forms.pdb" />
-    <Content Include="bin\Debug\BSE.Windows.Forms.xml" />
-    <Content Include="bin\Debug\chenx.BLL.dll" />
-    <Content Include="bin\Debug\chenx.BLL.pdb" />
-    <Content Include="bin\Debug\chenx.DAL.dll" />
-    <Content Include="bin\Debug\chenx.DAL.pdb" />
-    <Content Include="bin\Debug\chenx.exe" />
-    <Content Include="bin\Debug\chenx.Log.dll" />
-    <Content Include="bin\Debug\chenx.Log.pdb" />
-    <Content Include="bin\Debug\chenx.Model.dll" />
-    <Content Include="bin\Debug\chenx.Model.pdb" />
-    <Content Include="bin\Debug\chenx.pdb" />
-    <Content Include="bin\Debug\chenx.UI.dll" />
-    <Content Include="bin\Debug\chenx.UI.pdb" />
-    <Content Include="bin\Debug\chenx.Utils.dll" />
-    <Content Include="bin\Debug\chenx.Utils.pdb" />
-    <Content Include="bin\Debug\chenx.VerificationData.dll" />
-    <Content Include="bin\Debug\chenx.VerificationData.pdb" />
-    <Content Include="bin\Debug\chenx.vshost.exe" />
-    <Content Include="bin\Debug\DatabaseOperating.dll" />
-    <Content Include="bin\Debug\Database\chenx.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="bin\Debug\Database\chenx_log.ldf">
-      <DependentUpon>chenx.mdf</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="bin\Debug\JsonHelper.dll" />
-    <Content Include="bin\Debug\Shared\Images\add.png" />
-    <Content Include="bin\Debug\Shared\Images\DataList\delete.png" />
-    <Content Include="bin\Debug\Shared\Images\DataList\edit.png" />
-    <Content Include="bin\Debug\Shared\Images\DataList\resultset_first.png" />
-    <Content Include="bin\Debug\Shared\Images\DataList\resultset_last.png" />
-    <Content Include="bin\Debug\Shared\Images\DataList\resultset_next.png" />
-    <Content Include="bin\Debug\Shared\Images\DataList\resultset_previous.png" />
-    <Content Include="bin\Debug\Shared\Images\delete.png" />
-    <Content Include="bin\Debug\Shared\Images\edit.png" />
-    <Content Include="bin\Debug\Shared\Images\menu\application_view_list.png" />
-    <Content Include="bin\Debug\Shared\Images\menu\database_save.png" />
-    <Content Include="bin\Debug\Shared\Images\menu\monitor.png" />
-    <Content Include="bin\Debug\Shared\Images\menu\no.png" />
-    <Content Include="bin\Debug\Shared\Images\menu\page_white_vector.png" />
-    <Content Include="bin\Debug\Shared\Images\menu\page_world.png" />
-    <Content Include="bin\Debug\Shared\Images\menu\server_connect.png" />
-    <Content Include="bin\Debug\Shared\Images\menu\user.png" />
-    <Content Include="bin\Debug\Shared\Images\query.png" />
-    <Content Include="bin\Debug\Shared\Images\reset.png" />
-    <Content Include="bin\Debug\Shared\Images\System\Disabled.png" />
-    <Content Include="bin\Debug\Shared\Images\System\Enabled.png" />
-    <Content Include="bin\Debug\Shared\Images\user\user_add.png" />
-    <Content Include="bin\Debug\Shared\Images\user\user_delete.png" />
-    <Content Include="bin\Debug\Shared\Images\user\user_edit.png" />
     <Content Include="database_save.png" />
     <Content Include="Dll\BSE.Windows.Forms.dll" />
     <Content Include="Dll\BSE.Windows.Forms.pdb" />
@@ -412,10 +353,7 @@
       <Name>chenx.UI</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="bin\Debug\Log\Error\" />
-    <Folder Include="bin\Release\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">
       <Visible>False</Visible>
