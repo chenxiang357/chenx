@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7D82BBAE-EF3C-44D4-A52C-CDC7102F47BA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>chenx.UI</RootNamespace>
+    <AssemblyName>chenx.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BSE.Windows.Forms">
+      <HintPath>Dll\BSE.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="JsonHelper">
+      <HintPath>..\chenx.BLL\Dll\JsonHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Paging\Paging_Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Paging\Paging_Control.Designer.cs">
+      <DependentUpon>Paging_Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Subject\Account\Account\Account_Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Subject\Account\Account\Account_Control.Designer.cs">
+      <DependentUpon>Account_Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subject\Account\Account\Account_Menu_Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Subject\Account\Account\Account_Menu_Control.Designer.cs">
+      <DependentUpon>Account_Menu_Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subject\Financial\ExpendReport\Expend_Day_Controls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Subject\Financial\ExpendReport\Expend_Day_Controls.Designer.cs">
+      <DependentUpon>Expend_Day_Controls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subject\Financial\ExpendReport\Expend_Month_Controls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Subject\Financial\ExpendReport\Expend_Month_Controls.Designer.cs">
+      <DependentUpon>Expend_Month_Controls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subject\Financial\ExpendReport\Expend_Year_Controls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Subject\Financial\ExpendReport\Expend_Year_Controls.Designer.cs">
+      <DependentUpon>Expend_Year_Controls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subject\Financial\Expend\Expend_Controls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Subject\Financial\Expend\Expend_Controls.Designer.cs">
+      <DependentUpon>Expend_Controls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subject\Financial\Expend\Expend_Manage_Controls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Subject\Financial\Expend\Expend_Manage_Controls.Designer.cs">
+      <DependentUpon>Expend_Manage_Controls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subject\Log\ErrorLog\Log_Error_Details_Controls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Subject\Log\ErrorLog\Log_Error_Details_Controls.Designer.cs">
+      <DependentUpon>Log_Error_Details_Controls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subject\Log\ErrorLog\Log_Error_Manage_Controls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Subject\Log\ErrorLog\Log_Error_Manage_Controls.Designer.cs">
+      <DependentUpon>Log_Error_Manage_Controls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subject\Log\Log_Interview_Controls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Subject\Log\Log_Interview_Controls.Designer.cs">
+      <DependentUpon>Log_Interview_Controls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subject\Log\Log_Login_Controls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Subject\Log\Log_Login_Controls.Designer.cs">
+      <DependentUpon>Log_Login_Controls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subject\Log\OperatingLog\Log_Operating_Controls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Subject\Log\OperatingLog\Log_Operating_Controls.Designer.cs">
+      <DependentUpon>Log_Operating_Controls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subject\Log\OperatingLog\Log_Operating_Info_Controls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Subject\Log\OperatingLog\Log_Operating_Info_Controls.Designer.cs">
+      <DependentUpon>Log_Operating_Info_Controls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subject\MenuControls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Subject\MenuControls.Designer.cs">
+      <DependentUpon>MenuControls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subject\System\Parameter\Parameter_Name_Controls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Subject\System\Parameter\Parameter_Name_Controls.Designer.cs">
+      <DependentUpon>Parameter_Name_Controls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subject\System\Parameter\Parameter_Name_Manage_Controls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Subject\System\Parameter\Parameter_Name_Manage_Controls.Designer.cs">
+      <DependentUpon>Parameter_Name_Manage_Controls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subject\System\Parameter\Parameter_Value_Controls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Subject\System\Parameter\Parameter_Value_Controls.Designer.cs">
+      <DependentUpon>Parameter_Value_Controls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subject\System\Parameter\Parameter_Value_Manage_Controls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Subject\System\Parameter\Parameter_Value_Manage_Controls.Designer.cs">
+      <DependentUpon>Parameter_Value_Manage_Controls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subject\System\Role\Role_Manage_Controls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Subject\System\Role\Role_Manage_Controls.Designer.cs">
+      <DependentUpon>Role_Manage_Controls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subject\System\System_User\System_User_Controls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Subject\System\System_User\System_User_Controls.Designer.cs">
+      <DependentUpon>System_User_Controls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subject\System\System_User\System_User_Manage_Controls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Subject\System\System_User\System_User_Manage_Controls.Designer.cs">
+      <DependentUpon>System_User_Manage_Controls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Admin_Manage_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Utils\DataBinding.cs" />
+    <Compile Include="Utils\Delegate_Button.cs" />
+    <Compile Include="Utils\Encryption.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Paging\Paging_Control.resx">
+      <DependentUpon>Paging_Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subject\Account\Account\Account_Control.resx">
+      <DependentUpon>Account_Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subject\Account\Account\Account_Menu_Control.resx">
+      <DependentUpon>Account_Menu_Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subject\Financial\ExpendReport\Expend_Day_Controls.resx">
+      <DependentUpon>Expend_Day_Controls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subject\Financial\ExpendReport\Expend_Month_Controls.resx">
+      <DependentUpon>Expend_Month_Controls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subject\Financial\ExpendReport\Expend_Year_Controls.resx">
+      <DependentUpon>Expend_Year_Controls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subject\Financial\Expend\Expend_Controls.resx">
+      <DependentUpon>Expend_Controls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subject\Financial\Expend\Expend_Manage_Controls.resx">
+      <DependentUpon>Expend_Manage_Controls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subject\Log\ErrorLog\Log_Error_Details_Controls.resx">
+      <DependentUpon>Log_Error_Details_Controls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subject\Log\ErrorLog\Log_Error_Manage_Controls.resx">
+      <DependentUpon>Log_Error_Manage_Controls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subject\Log\Log_Interview_Controls.resx">
+      <DependentUpon>Log_Interview_Controls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subject\Log\Log_Login_Controls.resx">
+      <DependentUpon>Log_Login_Controls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subject\Log\OperatingLog\Log_Operating_Controls.resx">
+      <DependentUpon>Log_Operating_Controls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subject\Log\OperatingLog\Log_Operating_Info_Controls.resx">
+      <DependentUpon>Log_Operating_Info_Controls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subject\MenuControls.resx">
+      <DependentUpon>MenuControls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subject\System\Parameter\Parameter_Name_Controls.resx">
+      <DependentUpon>Parameter_Name_Controls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subject\System\Parameter\Parameter_Name_Manage_Controls.resx">
+      <DependentUpon>Parameter_Name_Manage_Controls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subject\System\Parameter\Parameter_Value_Controls.resx">
+      <DependentUpon>Parameter_Value_Controls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subject\System\Parameter\Parameter_Value_Manage_Controls.resx">
+      <DependentUpon>Parameter_Value_Manage_Controls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subject\System\Role\Role_Manage_Controls.resx">
+      <DependentUpon>Role_Manage_Controls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subject\System\System_User\System_User_Controls.resx">
+      <DependentUpon>System_User_Controls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subject\System\System_User\System_User_Manage_Controls.resx">
+      <DependentUpon>System_User_Manage_Controls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utils\Admin_Manage_UserControl.resx">
+      <DependentUpon>Admin_Manage_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\chenx.Model\chenx.Model.csproj">
+      <Project>{f25b1f4c-3417-4499-9328-144836f2ee04}</Project>
+      <Name>chenx.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

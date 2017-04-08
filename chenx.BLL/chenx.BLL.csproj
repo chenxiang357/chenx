@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{647FF237-59E7-4FFA-9988-62330CD3E6EB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>chenx.BLL</RootNamespace>
+    <AssemblyName>chenx.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="JsonHelper">
+      <HintPath>Dll\JsonHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BasicBLL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Subject\Account\Account\Account_BLL.cs" />
+    <Compile Include="Subject\Financial\Expend\Expend_BLL.cs" />
+    <Compile Include="Subject\Log\LogError_BLL.cs" />
+    <Compile Include="Subject\Log\Log_Interview_BLL.cs" />
+    <Compile Include="Subject\Log\Log_Operating_BLL.cs" />
+    <Compile Include="Subject\Log\ReadLog_BLL.cs" />
+    <Compile Include="Subject\System\Parameter\ParameterName_BLL.cs" />
+    <Compile Include="Subject\System\Parameter\ParameterValue_BLL.cs" />
+    <Compile Include="Subject\System\System_User\System_User_BLL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\chenx.DAL\chenx.DAL.csproj">
+      <Project>{3f0c7f0d-357a-4336-b3b3-c9f54b52bf61}</Project>
+      <Name>chenx.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\chenx.Log\chenx.Log.csproj">
+      <Project>{c100b7b0-9dee-4c8f-8d47-d421687800b4}</Project>
+      <Name>chenx.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\chenx.Model\chenx.Model.csproj">
+      <Project>{f25b1f4c-3417-4499-9328-144836f2ee04}</Project>
+      <Name>chenx.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\chenx.Utils\chenx.Utils.csproj">
+      <Project>{1332b4b4-e74a-4178-9980-9acd5632a182}</Project>
+      <Name>chenx.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\chenx.VerificationData\chenx.VerificationData.csproj">
+      <Project>{7750e95d-f33c-4950-90e0-7dcd5fb4445a}</Project>
+      <Name>chenx.VerificationData</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
