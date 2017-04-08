@@ -319,7 +319,6 @@
     <None Include="app.config" />
     <None Include="bin\Debug\chenx.exe.config" />
     <None Include="bin\Debug\chenx.vshost.exe.config" />
-    <None Include="bin\Debug\Database\Database.rar" />
     <None Include="bin\Debug\Database\DataJson\data.json" />
     <None Include="bin\Debug\Database\DataJson\Menu.json" />
     <None Include="bin\Debug\Shared\Config\config.json" />
@@ -364,7 +363,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="bin\Debug\JsonHelper.dll" />
-    <Content Include="bin\Debug\Log\Error\2017\4\3\2017_04_03%2817_09_16_654953%29.txt" />
     <Content Include="bin\Debug\Shared\Images\add.png" />
     <Content Include="bin\Debug\Shared\Images\DataList\delete.png" />
     <Content Include="bin\Debug\Shared\Images\DataList\edit.png" />
@@ -415,6 +413,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="bin\Debug\Log\Error\" />
     <Folder Include="bin\Release\" />
   </ItemGroup>
   <ItemGroup>
