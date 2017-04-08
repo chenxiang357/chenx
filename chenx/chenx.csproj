@@ -12,6 +12,21 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -302,6 +317,13 @@
       <DependentUpon>System_User_Update_Form.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="bin\Debug\chenx.exe.config" />
+    <None Include="bin\Debug\chenx.vshost.exe.config" />
+    <None Include="bin\Debug\Database\Database.rar" />
+    <None Include="bin\Debug\Database\DataJson\data.json" />
+    <None Include="bin\Debug\Database\DataJson\Menu.json" />
+    <None Include="bin\Debug\Shared\Config\config.json" />
+    <None Include="bin\Debug\Shared\Config\Images.json" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -313,7 +335,66 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\BSE.Windows.Forms.dll" />
+    <Content Include="bin\Debug\BSE.Windows.Forms.pdb" />
+    <Content Include="bin\Debug\BSE.Windows.Forms.xml" />
+    <Content Include="bin\Debug\chenx.BLL.dll" />
+    <Content Include="bin\Debug\chenx.BLL.pdb" />
+    <Content Include="bin\Debug\chenx.DAL.dll" />
+    <Content Include="bin\Debug\chenx.DAL.pdb" />
+    <Content Include="bin\Debug\chenx.exe" />
+    <Content Include="bin\Debug\chenx.Log.dll" />
+    <Content Include="bin\Debug\chenx.Log.pdb" />
+    <Content Include="bin\Debug\chenx.Model.dll" />
+    <Content Include="bin\Debug\chenx.Model.pdb" />
+    <Content Include="bin\Debug\chenx.pdb" />
+    <Content Include="bin\Debug\chenx.UI.dll" />
+    <Content Include="bin\Debug\chenx.UI.pdb" />
+    <Content Include="bin\Debug\chenx.Utils.dll" />
+    <Content Include="bin\Debug\chenx.Utils.pdb" />
+    <Content Include="bin\Debug\chenx.VerificationData.dll" />
+    <Content Include="bin\Debug\chenx.VerificationData.pdb" />
+    <Content Include="bin\Debug\chenx.vshost.exe" />
+    <Content Include="bin\Debug\DatabaseOperating.dll" />
+    <Content Include="bin\Debug\Database\chenx.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Debug\Database\chenx_log.ldf">
+      <DependentUpon>chenx.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Debug\JsonHelper.dll" />
+    <Content Include="bin\Debug\Log\Error\2017\4\3\2017_04_03%2817_09_16_654953%29.txt" />
+    <Content Include="bin\Debug\Shared\Images\add.png" />
+    <Content Include="bin\Debug\Shared\Images\DataList\delete.png" />
+    <Content Include="bin\Debug\Shared\Images\DataList\edit.png" />
+    <Content Include="bin\Debug\Shared\Images\DataList\resultset_first.png" />
+    <Content Include="bin\Debug\Shared\Images\DataList\resultset_last.png" />
+    <Content Include="bin\Debug\Shared\Images\DataList\resultset_next.png" />
+    <Content Include="bin\Debug\Shared\Images\DataList\resultset_previous.png" />
+    <Content Include="bin\Debug\Shared\Images\delete.png" />
+    <Content Include="bin\Debug\Shared\Images\edit.png" />
+    <Content Include="bin\Debug\Shared\Images\menu\application_view_list.png" />
+    <Content Include="bin\Debug\Shared\Images\menu\database_save.png" />
+    <Content Include="bin\Debug\Shared\Images\menu\monitor.png" />
+    <Content Include="bin\Debug\Shared\Images\menu\no.png" />
+    <Content Include="bin\Debug\Shared\Images\menu\page_white_vector.png" />
+    <Content Include="bin\Debug\Shared\Images\menu\page_world.png" />
+    <Content Include="bin\Debug\Shared\Images\menu\server_connect.png" />
+    <Content Include="bin\Debug\Shared\Images\menu\user.png" />
+    <Content Include="bin\Debug\Shared\Images\query.png" />
+    <Content Include="bin\Debug\Shared\Images\reset.png" />
+    <Content Include="bin\Debug\Shared\Images\System\Disabled.png" />
+    <Content Include="bin\Debug\Shared\Images\System\Enabled.png" />
+    <Content Include="bin\Debug\Shared\Images\user\user_add.png" />
+    <Content Include="bin\Debug\Shared\Images\user\user_delete.png" />
+    <Content Include="bin\Debug\Shared\Images\user\user_edit.png" />
     <Content Include="database_save.png" />
+    <Content Include="Dll\BSE.Windows.Forms.dll" />
+    <Content Include="Dll\BSE.Windows.Forms.pdb" />
+    <Content Include="Dll\BSE.Windows.Forms.xml" />
+    <Content Include="Dll\DatabaseOperating.dll" />
+    <Content Include="Dll\JsonHelper.dll" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\chenx.BLL\chenx.BLL.csproj">
@@ -332,6 +413,26 @@
       <Project>{7d82bbae-ef3c-44d4-a52c-cdc7102f47ba}</Project>
       <Name>chenx.UI</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
