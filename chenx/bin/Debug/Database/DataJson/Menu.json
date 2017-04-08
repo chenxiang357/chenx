@@ -1,0 +1,84 @@
+﻿[
+    {
+        "MenuId": "FinancialXPanderPanel",
+        "MenuName": "财政管理",
+        "MenuList": [
+            {
+                "ModuleId": "Expend_Manage_Form",
+                "ModuleName": "支出管理",
+                "ImagesUrl": "/Shared/Images/menu/user.png",
+                "No": 1
+            },
+            {
+                "ModuleId": "ExpendReport_Form",
+                "ModuleName": "支出报表",
+                "ImagesUrl": "/Shared/Images/menu/user.png",
+                "No": 3
+            }
+        ],
+        "No": 3
+    },
+    {
+        "MenuId": "AccountXPanderPanel",
+        "MenuName": "账号管理",
+        "MenuList": [
+            {
+                "ModuleId": "Account_Manage_Form",
+                "ModuleName": "账号管理",
+                "ImagesUrl": "/Shared/Images/menu/user.png",
+                "No": 1
+            }
+        ],
+        "No": 7
+    },
+    {
+        "MenuId": "SystemXPanderPanel",
+        "MenuName": "系统管理",
+        "MenuList": [
+            {
+                "ModuleId": "System_User_Manage_Form",
+                "ModuleName": "用户管理",
+                "ImagesUrl": "/Shared/Images/menu/user.png",
+                "No": 1
+            },
+            {
+                "ModuleId": "Parameter_Manage_Form",
+                "ModuleName": "参数管理",
+                "ImagesUrl": "/Shared/Images/menu/page_white_vector.png",
+                "No": 3
+            }
+        ],
+        "No": 98
+    },
+    {
+        "MenuId": "LogXPanderPanel",
+        "MenuName": "日志管理",
+        "MenuList": [
+            {
+                "ModuleId": "Log_Login_Form",
+                "ModuleName": "登录日志",
+                "ImagesUrl": "/Shared/Images/menu/user.png",
+                "No": 1
+            },
+            {
+                "ModuleId": "Log_Interview_Form",
+                "ModuleName": "访问日志",
+                "ImagesUrl": "/Shared/Images/menu/user.png",
+                "No": 3
+            },
+            {
+                "ModuleId": "Log_Operating_Form",
+                "ModuleName": "操作日志",
+                "ImagesUrl": "/Shared/Images/menu/user.png",
+                "No": 7
+            },
+            {
+                "ModuleId": "Log_Error_Manage_Form",
+                "ModuleName": "错误日志",
+                "ImagesUrl": "/Shared/Images/menu/user.png",
+                "No": 9
+            }
+        ],
+        "No": 99
+    }
+]
