@@ -1,8 +1,9 @@
-简单个人记账管理Winform
+简单个人记账管理Winform<br/>
 ===============================<br/>
 
-开发环境为 visual studio 2015
-数据库为 Sql Server 2014
+开发环境为 visual studio 2015<br/>
+
+数据库为 Sql Server 2014<br/>
 
 ===============================<br/>
 菜单栏是使用第三方插件 BSE.Windows.Forms.dll <br/>
