@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using chenx.Config;
 using System.Configuration;
+using System.IO;
+using JsonHelper;
 
 namespace chenx.BLL
 {
@@ -36,6 +38,11 @@ namespace chenx.BLL
         {
             get { return _ErrorMessage; }
         }
+
+        /// <summary>
+        /// 读取配置
+        /// </summary>
+        private ReadConfigFile readConfigFile;
 
         /// <summary>
         /// 校验Login信息
@@ -105,7 +112,22 @@ namespace chenx.BLL
             user_Entity.IsAdmin = entity.IsAdmin;
             user_Entity.LoginName = entity.LoginName;
             user_Entity.UserName = entity.UserName;
-            User_Login_Config.UserLongInfo = user_Entity;
+            ReadConfigFile.UserLongInfo = user_Entity;
+        }
+
+        /// <summary>
+        /// 读取配置
+        /// </summary>
+        public void ReadConfig()
+        {
+            if (readConfigFile == null)
+            {
+                readConfigFile = new ReadConfigFile();
+            }
+
+            readConfigFile.Read_Text_Contents(Json.Deserialization<TextConfigInfo>(
+                File.ReadAllText(Directory.GetCurrentDirectory() + "/" + ConfigurationManager.AppSettings["Text_Contents_PathUrl"].ToString(), 
+                Encoding.UTF8)));
         }
 
         #region 释放资源

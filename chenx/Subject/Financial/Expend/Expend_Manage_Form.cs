@@ -37,6 +37,7 @@ namespace chenx
             expend_Manage_Controls1.Binding_Parameter_Data = Parameter_Data;
             expend_Manage_Controls1.DataGridView_Update_Button = DataGridView_Update_Button;
             expend_Manage_Controls1.DataGridView_Delete_Button = DataGridView_Delete_Button;
+            expend_Manage_Controls1.DataGridView_Synchronize_Button = DataGridView_Synchronize_Button;
             paging_Control1.Paging = BindingDataGridView;
 
             BindingDataGridView(1);
@@ -146,5 +147,13 @@ namespace chenx
             }
         }
 
-    }
+        /// <summary>
+        /// 同步
+        /// </summary>
+        /// <param name="id">主键</param>
+        private void DataGridView_Synchronize_Button(string id)
+        {
+        }
+
+        }
 }

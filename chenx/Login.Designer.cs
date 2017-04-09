@@ -90,11 +90,10 @@
             // 
             this.System_Title_Label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.System_Title_Label.Font = new System.Drawing.Font("隶书", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.System_Title_Label.Location = new System.Drawing.Point(8, 68);
+            this.System_Title_Label.Location = new System.Drawing.Point(8, 61);
             this.System_Title_Label.Name = "System_Title_Label";
             this.System_Title_Label.Size = new System.Drawing.Size(507, 55);
             this.System_Title_Label.TabIndex = 12;
-            this.System_Title_Label.Text = "222";
             this.System_Title_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // UserName_TextBox

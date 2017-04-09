@@ -1,5 +1,7 @@
-{
-  "LoginTitle":"����ǲ���",
-  "LoginTitleFont":"����",
-  "LoginTitleFontSize":"18"
+﻿{
+  "LoginTitle":"简单个人财政管理",
+  "LoginTitleFont":"宋体",
+  "LoginTitleFontSize":18,
+  "SystemName":"简单个人财政管理",
+  "MenuBarName":"菜单栏名称2"
 }

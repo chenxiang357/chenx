@@ -11,6 +11,7 @@ using System.IO;
 using System.Configuration;
 using System.CodeDom.Compiler;
 using System.Reflection;
+using chenx.Config;
 
 namespace chenx
 {
@@ -30,13 +31,24 @@ namespace chenx
             #endregion
 
             InitializeComponent();
-            //  this.Size = new Size(Screen.PrimaryScreen.WorkingArea.Width, Screen.PrimaryScreen.WorkingArea.Height);
+
+            //菜单栏
             menuControls1.MenuJson = File.ReadAllText(Directory.GetCurrentDirectory() + ConfigurationManager.AppSettings["MenuUrlPath"].ToString());
         }
 
         private void Index_Load(object sender, EventArgs e)
         {
-            menuControls1.Click_PopUp_Window = Click_PopUp_Window;
+            //首页名称
+            Text = ReadConfigFile.Text_Config.SystemName;
+
+            //菜单名称
+            menuControls1.MenuName = ReadConfigFile.Text_Config.MenuBarName;
+
+            //当前用户
+            UserName_ToolStripStatusLabel.Text= ReadConfigFile.UserLongInfo.LoginName;
+
+            //委托
+            menuControls1.Click_PopUp_Window = Click_PopUp_Window;  
             menuControls1.ShowForm(new Main_Form(), this);
         }
 
@@ -65,52 +77,7 @@ namespace chenx
             {
                 MessageBox.Show("没有" + buttonId + "窗体","菜单提示");
             }
-            //switch (buttonId)
-            //{
-            //    case "User":
-            //        menuControls1.ShowForm<System_User_Manage_Form, Index>(this);
-            //        break;
-            //    case "Role":
-            //        menuControls1.ShowForm<Role_Manage_Form, Index>(this);
-            //        break;
-            //    case "Parameter":
-            //        menuControls1.ShowForm<Parameter_Manage_Form, Index>(this);
-            //        break;
-            //    case "Expend":
-            //        menuControls1.ShowForm<Expend_Manage_Form, Index>(this);
-            //        break;
-            //    case "ExpendReport":
-            //        menuControls1.ShowForm<ExpendReport_Form, Index>(this);
-            //        break;
-            //    case "Account":
-            //        menuControls1.ShowForm<Account_Manage_Form, Index>(this);
-            //        break;
-            //    case "LoginLog":
-            //        //登录日志
-            //        menuControls1.ShowForm<Log_Login_Form, Index>(this);
-            //        break;
-            //    case "InterviewLog":
-            //        //访问日志
-            //        menuControls1.ShowForm<Log_Interview_Form, Index>(this);
-            //        break;
-            //    case "OperatingLog":
-            //        //操作日志
-            //        menuControls1.ShowForm<Log_Operating_Form, Index>(this);
-            //        break;
-            //    case "ErrorLog":
-            //        //错误日志
-            //        menuControls1.ShowForm<Error_Log_Manage_Form, Index>(this);
-            //        break;
-            //    default:
-            //        break;
-            //}
         }
-
-        private void Index_SizeChanged(object sender, EventArgs e)
-        {
-            //menuControls1.FormSize();
-        }
-
 
     }
 }

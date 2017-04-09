@@ -1,4 +1,5 @@
 ﻿using chenx.BLL;
+using chenx.Config;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,12 +20,16 @@ namespace chenx
 
         public Login()
         {
+      
             InitializeComponent();
         }
 
         private void Login_Load(object sender, EventArgs e)
         {
-            
+            loginBLL = new Login_BLL();
+            loginBLL.ReadConfig();
+            System_Title_Label.Text = ReadConfigFile.Text_Config.LoginTitle;
+            System_Title_Label.Font = new Font(ReadConfigFile.Text_Config.LoginTitleFont, ReadConfigFile.Text_Config.LoginTitleFontSize);
         }
 
         #region 窗体移动

@@ -142,7 +142,7 @@ namespace chenx.BLL
         {
             Log_Operating.Result = status.ToString();
             Log_Operating.OperationType = operationType;
-            Log_Operating.Login_Name = User_Login_Config.UserLongInfo.LoginName;
+            Log_Operating.Login_Name = ReadConfigFile.UserLongInfo.LoginName;
         }
     }
 }

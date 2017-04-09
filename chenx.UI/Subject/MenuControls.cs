@@ -25,6 +25,14 @@ namespace chenx.UI
         /// </summary>
         public string MenuJson { get; set; }
 
+        /// <summary>
+        /// 菜单名称
+        /// </summary>
+        public string MenuName
+        {
+            set { panel1.Text = value; }
+        }
+
         ///// <summary>
         ///// 记录弹出窗口的名称
         ///// </summary>

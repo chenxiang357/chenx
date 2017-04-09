@@ -32,10 +32,7 @@ namespace chenx.Config
         /// </summary>
         public string IsAdmin { get; set; }
 
-        /// <summary>
-        /// 用户登陆信息
-        /// </summary>
-        public static User_Login_Config UserLongInfo { get; set; }
+
 
     }
 }

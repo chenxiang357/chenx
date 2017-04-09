@@ -40,6 +40,11 @@ namespace chenx.UI
         public Button_Click_Id DataGridView_Delete_Button;
 
         /// <summary>
+        /// 同步
+        /// </summary>
+        public Button_Click_Id DataGridView_Synchronize_Button;
+
+        /// <summary>
         /// 数据集
         /// </summary>
         public DataTable Data
@@ -190,10 +195,22 @@ namespace chenx.UI
                 switch (ExpendDataGridView.Columns[e.ColumnIndex].Name)
                 {
                     case "updateData":
-                        DataGridView_Update_Button(ExpendDataGridView.Rows[e.RowIndex].Cells[2].Value.ToString());
+                        if (DataGridView_Update_Button != null)
+                        {
+                            DataGridView_Update_Button(ExpendDataGridView.Rows[e.RowIndex].Cells[3].Value.ToString());
+                        }
                         break;
                     case "deleteData":
-                        DataGridView_Delete_Button(ExpendDataGridView.Rows[e.RowIndex].Cells[2].Value.ToString());
+                        if (DataGridView_Delete_Button != null)
+                        {
+                            DataGridView_Delete_Button(ExpendDataGridView.Rows[e.RowIndex].Cells[3].Value.ToString());
+                        }
+                        break;
+                    case "synchronizeData":
+                        if (DataGridView_Synchronize_Button!=null)
+                        {
+                            DataGridView_Synchronize_Button(ExpendDataGridView.Rows[e.RowIndex].Cells[3].Value.ToString());
+                        }
                         break;
                     default:
                         break;

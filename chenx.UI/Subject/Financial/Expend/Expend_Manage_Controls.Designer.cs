@@ -62,6 +62,7 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.updateData = new System.Windows.Forms.DataGridViewImageColumn();
             this.deleteData = new System.Windows.Forms.DataGridViewImageColumn();
+            this.synchronizeData = new System.Windows.Forms.DataGridViewImageColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ExpendDataGridView)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -209,7 +210,8 @@
             this.Column2,
             this.Column4,
             this.updateData,
-            this.deleteData});
+            this.deleteData,
+            this.synchronizeData});
             this.ExpendDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ExpendDataGridView.Location = new System.Drawing.Point(0, 47);
             this.ExpendDataGridView.Name = "ExpendDataGridView";
@@ -371,6 +373,15 @@
             this.deleteData.ReadOnly = true;
             this.deleteData.Width = 38;
             // 
+            // synchronizeData
+            // 
+            this.synchronizeData.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.synchronizeData.HeaderText = "复制";
+            this.synchronizeData.MinimumWidth = 38;
+            this.synchronizeData.Name = "synchronizeData";
+            this.synchronizeData.ReadOnly = true;
+            this.synchronizeData.Width = 38;
+            // 
             // Expend_Manage_Controls
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -426,5 +437,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewImageColumn updateData;
         private System.Windows.Forms.DataGridViewImageColumn deleteData;
+        private System.Windows.Forms.DataGridViewImageColumn synchronizeData;
     }
 }

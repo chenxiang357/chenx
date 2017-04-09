@@ -27,7 +27,7 @@ namespace chenx
         /// <param name="obj"></param>
         private void AddInstance(object obj)
         {
-            Log_Interview_Singleton.Instance.Login_Name =  User_Login_Config.UserLongInfo.LoginName;
+            Log_Interview_Singleton.Instance.Login_Name = ReadConfigFile.UserLongInfo.LoginName;
             Log_Interview_Singleton.Instance.ModuleName = Text;
             Log_Interview_Singleton.Instance.ResultsDescribed = "访问页面:" + Name;
             Log_Interview_Singleton.Instance.Generatelog();
