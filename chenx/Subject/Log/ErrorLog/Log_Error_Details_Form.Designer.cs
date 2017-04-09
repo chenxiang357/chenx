@@ -36,18 +36,22 @@
             this.log_Error_Details_Controls1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.log_Error_Details_Controls1.Location = new System.Drawing.Point(0, 0);
             this.log_Error_Details_Controls1.Name = "log_Error_Details_Controls1";
-            this.log_Error_Details_Controls1.Size = new System.Drawing.Size(837, 450);
+            this.log_Error_Details_Controls1.Size = new System.Drawing.Size(922, 450);
             this.log_Error_Details_Controls1.TabIndex = 0;
             // 
             // Log_Error_Details_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(837, 450);
+            this.ClientSize = new System.Drawing.Size(922, 450);
             this.Controls.Add(this.log_Error_Details_Controls1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Log_Error_Details_Form";
-            this.Text = "Error_Log_Details_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "错误日志详细信息";
+            //this.Load += new System.EventHandler(this.Log_Error_Details_Form_Load);
             this.ResumeLayout(false);
 
         }

@@ -23,7 +23,7 @@ namespace chenx.DAL
         {
             ICallDatabase dr = new CallDatabase();
             dr.InitiCommand();
-            dr.CommandText = "select Login_Name,Result,ResultsDescribed,Creation_Date from [Log_Login]  where DateDiff(\"d\",Creation_Date, format(@Creation_Date,'yyyy-MM-dd'))=0  And [Login_Name] like @Login_Name  order by [Creation_Date] desc";
+            dr.CommandText = "select Login_Name,Result,ResultsDescribed,Creation_Date from [Log_Login]  where DateDiff(day,Creation_Date,@Creation_Date)=0  And [Login_Name] like @Login_Name  order by [Creation_Date] desc";
             dr.AddParameters("Creation_Date", DbType.String, 20, date.ToString());
             dr.AddParameters("Login_Name", DbType.String, 50, "%" + loginName + "%");
             DataSet data = dr.DataList();

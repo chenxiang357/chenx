@@ -47,7 +47,7 @@
             this.Controls.Add(this.log_Login_Controls1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Log_Login_Form";
-            this.Text = "Log_Login_Form";
+            this.Text = "登录日志";
             this.ResumeLayout(false);
 
         }

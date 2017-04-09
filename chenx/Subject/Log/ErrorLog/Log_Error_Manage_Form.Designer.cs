@@ -47,7 +47,8 @@
             this.Controls.Add(this.log_Error_Manage_Controls1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Log_Error_Manage_Form";
-            this.Text = "Error_Log_Manage_Form";
+            this.Text = "错误日志管理";
+            //this.Load += new System.EventHandler(this.Log_Error_Manage_Form_Load);
             this.ResumeLayout(false);
 
         }

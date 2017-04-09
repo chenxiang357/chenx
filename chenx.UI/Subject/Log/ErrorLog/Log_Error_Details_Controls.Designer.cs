@@ -99,12 +99,12 @@
             this.label2.Size = new System.Drawing.Size(0, 12);
             this.label2.TabIndex = 1;
             // 
-            // Error_Log_Details_Controls
+            // Log_Error_Details_Controls
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "Error_Log_Details_Controls";
+            this.Name = "Log_Error_Details_Controls";
             this.Size = new System.Drawing.Size(879, 534);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

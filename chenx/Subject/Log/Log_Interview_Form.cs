@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace chenx
 {
-    public partial class Log_Interview_Form : Form
+    public partial class Log_Interview_Form : BasicSettingsForm
     {
 
         private Log_Interview_BLL log_Interview_BLL;
@@ -20,12 +20,14 @@ namespace chenx
             InitializeComponent();
         }
 
-        private void Log_Interview_Form_Load(object sender, EventArgs e)
+        protected override void OnLoad(EventArgs e)
         {
             log_Interview_Controls1.InquireClick += InquireButton_Click;
             log_Interview_Controls1.ResetClick += ResetButton_Click;
             DoLoad();
+            base.OnLoad(e);
         }
+
 
         /// <summary>
         /// 

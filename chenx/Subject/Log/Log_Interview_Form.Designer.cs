@@ -47,8 +47,8 @@
             this.Controls.Add(this.log_Interview_Controls1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Log_Interview_Form";
-            this.Text = "Log_Interview_Form";
-            this.Load += new System.EventHandler(this.Log_Interview_Form_Load);
+            this.Text = "访问日志";
+            //this.Load += new System.EventHandler(this.Log_Interview_Form_Load);
             this.ResumeLayout(false);
 
         }

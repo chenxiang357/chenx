@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace chenx
 {
-    public partial class Log_Operating_Form : Form
+    public partial class Log_Operating_Form : BasicSettingsForm
     {
 
         private Log_Operating_BLL log_Operating_BLL;
@@ -20,12 +20,13 @@ namespace chenx
             InitializeComponent();
         }
 
-        private void log_Operating_Controls1_Load(object sender, EventArgs e)
+        protected override void OnLoad(EventArgs e)
         {
             log_Operating_Controls1.InquireClick += InquireButton_Click;
             log_Operating_Controls1.ResetClick += ResetButton_Click;
             log_Operating_Controls1.DataGridView_Show += DataGridView_Show;
             DoLoad();
+            base.OnLoad(e);
         }
 
         void DoLoad()

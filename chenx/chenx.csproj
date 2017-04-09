@@ -329,11 +329,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="database_save.png" />
-    <Content Include="Dll\BSE.Windows.Forms.dll" />
-    <Content Include="Dll\BSE.Windows.Forms.pdb" />
-    <Content Include="Dll\BSE.Windows.Forms.xml" />
-    <Content Include="Dll\DatabaseOperating.dll" />
-    <Content Include="Dll\JsonHelper.dll" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\chenx.BLL\chenx.BLL.csproj">

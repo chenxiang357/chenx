@@ -38,7 +38,7 @@
             this.log_Operating_Controls1.Name = "log_Operating_Controls1";
             this.log_Operating_Controls1.Size = new System.Drawing.Size(765, 480);
             this.log_Operating_Controls1.TabIndex = 0;
-            this.log_Operating_Controls1.Load += new System.EventHandler(this.log_Operating_Controls1_Load);
+            //this.log_Operating_Controls1.Load += new System.EventHandler(this.log_Operating_Controls1_Load);
             // 
             // Log_Operating_Form
             // 
@@ -48,7 +48,7 @@
             this.Controls.Add(this.log_Operating_Controls1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Log_Operating_Form";
-            this.Text = "Log_Operating_Form";
+            this.Text = "操作日志";
             this.ResumeLayout(false);
 
         }

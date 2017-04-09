@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace chenx
 {
-    public partial class Log_Operating_Info_Form : Form
+    public partial class Log_Operating_Info_Form : BasicSettingsForm
     {
 
         public Log_Operating_BLL log_Operating_BLL;
@@ -39,5 +39,11 @@ namespace chenx
         {
             InitializeComponent();
         }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+        }
+
     }
 }

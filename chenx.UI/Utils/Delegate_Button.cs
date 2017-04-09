@@ -31,6 +31,12 @@ namespace chenx.UI
     /// <param name="nodes">节点</param>
     public delegate void Click_TreeNode(TreeNode nodes);
 
+    /// <summary>
+    /// 委托文本
+    /// </summary>
+    /// <param name="value">值</param>
+    public delegate void DelegateString(string value);
+
     ///// <summary>
     ///// 弹出窗口
     ///// </summary>

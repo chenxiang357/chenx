@@ -81,6 +81,7 @@
             this.ResetButton.TabIndex = 31;
             this.ResetButton.Text = "重置";
             this.ResetButton.UseVisualStyleBackColor = true;
+            this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
             // 
             // LoginNameTextBox
             // 
@@ -117,6 +118,7 @@
             this.InquireButton.TabIndex = 28;
             this.InquireButton.Text = "查询";
             this.InquireButton.UseVisualStyleBackColor = true;
+            this.InquireButton.Click += new System.EventHandler(this.InquireButton_Click);
             // 
             // label1
             // 
@@ -147,6 +149,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(840, 498);
             this.dataGridView1.TabIndex = 23;
+            this.dataGridView1.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dataGridView1_RowStateChanged);
             // 
             // Column1
             // 

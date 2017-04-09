@@ -132,7 +132,7 @@
             this.IsMdiContainer = true;
             this.Name = "Index";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Index";
+            this.Text = "首页";
             this.Load += new System.EventHandler(this.Index_Load);
             this.SizeChanged += new System.EventHandler(this.Index_SizeChanged);
             this.toolStrip1.ResumeLayout(false);
