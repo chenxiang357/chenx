@@ -17,6 +17,16 @@ namespace chenx
 {
     public partial class Index : Form
     {
+        /// <summary>
+        /// 判断系统是退出还是关闭（默认为退出系统）
+        /// </summary>
+        private bool IsButtonExit;
+
+        /// <summary>
+        /// 窗体接口
+        /// </summary>
+        public IForm iForm { get; set; }
+
 
         private Form form;
 
@@ -38,6 +48,8 @@ namespace chenx
 
         private void Index_Load(object sender, EventArgs e)
         {
+            IsButtonExit = true;
+
             //首页名称
             Text = ReadConfigFile.Text_Config.SystemName;
 
@@ -79,5 +91,41 @@ namespace chenx
             }
         }
 
+        private void Index_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (IsButtonExit)
+            {
+                if (MessageBox.Show("你确定要关闭系统吗?", "退出提示", MessageBoxButtons.YesNo) == DialogResult.No)
+                {
+                    e.Cancel = true;        //取消事件的值
+                    return;
+                }
+
+                iForm.CloseForm();
+            }
+        }
+
+        /// <summary>
+        /// 退出系统（返回登入界面）
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Exit_ToolStripButton_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("你确定要退出系统吗?", "退出提示", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.DialogResult = DialogResult.OK;
+
+                //退出系统 IsButtonExit 就变量
+                IsButtonExit = false;
+                this.Dispose();
+            }
+        }
+
+        private void Update_Info_ToolStripButton_Click(object sender, EventArgs e)
+        {
+            User_Update_Form user_Update_Form = new User_Update_Form();
+            user_Update_Form.ShowDialog();
+        }
     }
 }

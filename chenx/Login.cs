@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace chenx
 {
-    public partial class Login : Form
+    public partial class Login : Form, IForm
     {
         private Login_BLL loginBLL;
 
@@ -95,9 +95,22 @@ namespace chenx
                 //    this.Visible = true;
                 //}
                 Index index = new Index();
-                index.Show();
+                index.iForm = this;
+                if (index.ShowDialog() == DialogResult.OK)
+                {
+                    this.Visible = true;
+                }
             }
 
+        }
+
+        /// <summary>
+        /// 窗体关闭
+        /// </summary>
+        public  void CloseForm()
+        {
+            //LoginBLL.Dispose();     //释放资源
+            Dispose();
         }
     }
 }

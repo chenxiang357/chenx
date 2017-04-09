@@ -190,6 +190,12 @@
     <Compile Include="Subject\System\System_User\System_User_Manage_Controls.Designer.cs">
       <DependentUpon>System_User_Manage_Controls.cs</DependentUpon>
     </Compile>
+    <Compile Include="Subject\User_Update_Controls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Subject\User_Update_Controls.Designer.cs">
+      <DependentUpon>User_Update_Controls.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils\Admin_Manage_UserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -267,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Subject\System\System_User\System_User_Manage_Controls.resx">
       <DependentUpon>System_User_Manage_Controls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subject\User_Update_Controls.resx">
+      <DependentUpon>User_Update_Controls.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Utils\Admin_Manage_UserControl.resx">
       <DependentUpon>Admin_Manage_UserControl.cs</DependentUpon>

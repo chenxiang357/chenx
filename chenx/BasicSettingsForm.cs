@@ -14,6 +14,7 @@ namespace chenx
     /// </summary>
     public class BasicSettingsForm :Form
     {
+       // public static readonly ILog_Interview Instance = new Log_Interview_Add_DAL();
 
         protected override void OnLoad(EventArgs e)
         {
@@ -32,17 +33,5 @@ namespace chenx
             Log_Interview_Singleton.Instance.ResultsDescribed = "访问页面:" + Name;
             Log_Interview_Singleton.Instance.Generatelog();
         }
-
-        //private void InitializeComponent()
-        //{
-        //    this.SuspendLayout();
-        //    // 
-        //    // BasicSettingsForm
-        //    // 
-        //    this.ClientSize = new System.Drawing.Size(284, 261);
-        //    this.Name = "BasicSettingsForm";
-        //    this.ResumeLayout(false);
-
-        //}
     }
 }

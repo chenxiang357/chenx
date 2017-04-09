@@ -57,6 +57,7 @@
     <Compile Include="Subject\System\Parameter\ParameterName_BLL.cs" />
     <Compile Include="Subject\System\Parameter\ParameterValue_BLL.cs" />
     <Compile Include="Subject\System\System_User\System_User_BLL.cs" />
+    <Compile Include="Subject\User_Update_BLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\chenx.Config\chenx.Config.csproj">

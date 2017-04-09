@@ -71,6 +71,24 @@ namespace chenx.DAL
         }
 
         /// <summary>
+        /// 更新密码
+        /// </summary>
+        /// <param name="pwd">新密码</param>
+        /// <param name="id">主键</param>
+        /// <returns></returns>
+        public int Update_Pwd(string pwd, string id)
+        {
+            if (dr == null)
+                dr = new CallDatabase();
+            dr.InitiCommand("Update Sys_User set [Pwd]=@Pwd where [Id]=@Id ");
+            dr.AddParameters("Pwd", DbType.String, 20, pwd);
+            dr.AddParameters("Id", DbType.Int32, id);
+            int value = dr.ExecuteNonQuery();
+            dr.Close();
+            return value;
+        }
+
+        /// <summary>
         /// 删除
         /// </summary>
         /// <param name="id">主键</param>
