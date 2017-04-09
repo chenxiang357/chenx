@@ -5,6 +5,14 @@
 
 数据库为 Sql Server 2014<br/>
 
+==============================<br/>
+
+Shared/Config/config.json 配置系统的文本信息<br/>
+
+Database/DataJson/Menu.json 添加菜单<br/>
+
+Database/DataJson/data.json 存放账号数据<br/>
+
 ===============================<br/>
 菜单栏是使用第三方插件 BSE.Windows.Forms.dll <br/>
 
