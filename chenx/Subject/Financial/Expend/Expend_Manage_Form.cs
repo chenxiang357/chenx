@@ -54,8 +54,8 @@ namespace chenx
             if (Expend == null)
                 Expend = new Expend_BLL();
 
-            expend_Manage_Controls1.Data = Expend.PagingData(pageIndex, out pageCount, pageSize, expend_Manage_Controls1.StartDate, 
-                expend_Manage_Controls1.EndDate, expend_Manage_Controls1.ExpendType, expend_Manage_Controls1.ItemName, 
+            expend_Manage_Controls1.Data = Expend.PagingData(pageIndex, out pageCount, pageSize, expend_Manage_Controls1.StartDate,
+                expend_Manage_Controls1.EndDate, expend_Manage_Controls1.ExpendType, expend_Manage_Controls1.ItemName,
                 expend_Manage_Controls1.Amount_1, expend_Manage_Controls1.Amount_2);
 
             //分页
@@ -134,7 +134,7 @@ namespace chenx
         /// <param name="id">主键</param>
         private void DataGridView_Delete_Button(string id)
         {
-            if (MessageBox.Show("请确定要删除吗?", "删除提示", MessageBoxButtons.YesNo,MessageBoxIcon.Asterisk) == DialogResult.Yes)
+            if (MessageBox.Show("请确定要删除吗?", "删除提示", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk) == DialogResult.Yes)
             {
                 if (Expend == null)
                     Expend = new Expend_BLL();
@@ -153,7 +153,15 @@ namespace chenx
         /// <param name="id">主键</param>
         private void DataGridView_Synchronize_Button(string id)
         {
+            Expend_Synchronize_Form Update = new Expend_Synchronize_Form();
+            Update.Binding_Parameter_Data = Parameter_Data;
+            Update.Id = id;
+            if (Update.ShowDialog() == DialogResult.OK)
+            {
+                BindingDataGridView(paging_Control1.PageIndex);
+                Total_Amount();
+            }
         }
 
-        }
+    }
 }

@@ -377,6 +377,7 @@
             // 
             this.synchronizeData.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.synchronizeData.HeaderText = "复制";
+            this.synchronizeData.Image = ((System.Drawing.Image)(resources.GetObject("synchronizeData.Image")));
             this.synchronizeData.MinimumWidth = 38;
             this.synchronizeData.Name = "synchronizeData";
             this.synchronizeData.ReadOnly = true;
