@@ -100,6 +100,23 @@ namespace chenx.DAL
             return data;
         }
 
+        /// <summary>
+        /// 根据用户名来获取用户信息
+        /// </summary>
+        /// <param name="loginName">用户名</param>
+        /// <returns></returns>
+        public DataSet GetLoginInfo(string loginName)
+        {
+            if (dr == null)
+                dr = new CallDatabase();
+            dr.InitiCommand();
+            dr.CommandText = "select * from Sys_User where [LoginName]=@LoginName";
+            dr.AddParameters("LoginName", DbType.String, 30, loginName);
+            var data = dr.DataList();
+            dr.Close();
+            return data;
+        }
+
         #region 释放资源
 
         public void Dispose()

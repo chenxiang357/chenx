@@ -1,4 +1,5 @@
-﻿using System;
+﻿using chenx.BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,6 +12,7 @@ namespace chenx
 {
     public partial class Login : Form
     {
+        private Login_BLL loginBLL;
 
         //窗体的位置;
         private Point p;        //点击之后的坐标（窗体之内的坐标）
@@ -22,7 +24,7 @@ namespace chenx
 
         private void Login_Load(object sender, EventArgs e)
         {
-            //System_Title_Label.Font = new Font("隶书", 18);
+            
         }
 
         #region 窗体移动
@@ -63,11 +65,34 @@ namespace chenx
 
         private void SignInButton_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-            Index i = new Index();
-            i.Show();
-        }
+            if (loginBLL==null)
+            {
+                loginBLL = new Login_BLL();
+            }
 
-     
+            if (!loginBLL.LoginInfoVerify(UserName_TextBox.Text, Password_TextBox.Text))
+            {
+                //校验用户输入信息
+                MessageBox.Show(loginBLL.ErrorMessage, "登陆提示");
+            }
+            else if (loginBLL.UserLogin())
+            {
+                //用户登录
+                MessageBox.Show(loginBLL.ErrorMessage, "登陆提示");
+            }
+            else
+            {
+                //登入成功之后的操作
+                this.Visible = false;   //隐藏当前页
+                loginBLL.Dispose();     //释放资源
+                //if (PopUpSindow(new IndexForm() { iForm = this }) == DialogResult.OK)
+                //{
+                //    this.Visible = true;
+                //}
+                Index index = new Index();
+                index.Show();
+            }
+
+        }
     }
 }

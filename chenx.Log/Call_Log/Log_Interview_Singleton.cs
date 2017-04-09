@@ -15,6 +15,6 @@ namespace chenx.Log
 
         }
 
-        public static readonly ILog_Interview Instance = new Log_Interview_DAL();
+        public static readonly ILog_Interview Instance = new Log_Interview_Add_DAL();
     }
 }

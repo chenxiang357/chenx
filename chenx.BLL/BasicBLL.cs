@@ -1,4 +1,5 @@
-﻿using chenx.Log;
+﻿using chenx.Config;
+using chenx.Log;
 using chenx.VerificationData;
 using System;
 using System.Collections.Generic;
@@ -53,7 +54,7 @@ namespace chenx.BLL
         {
             if (Log_Operating == null)
             {
-                Log_Operating = new Log_Operating_DAL();
+                Log_Operating = new Log_Operating_Add_DAL();
             }
             Log_Entity(s, "添加");
             AddLog(resultsDescribed);
@@ -77,7 +78,7 @@ namespace chenx.BLL
         {
             if (Log_Operating == null)
             {
-                Log_Operating = new Log_Operating_DAL();
+                Log_Operating = new Log_Operating_Add_DAL();
             }
 
             Log_Entity(s, "更新");
@@ -98,7 +99,7 @@ namespace chenx.BLL
         {
             if (Log_Operating == null)
             {
-                Log_Operating = new Log_Operating_DAL();
+                Log_Operating = new Log_Operating_Add_DAL();
             }
 
             Log_Entity(s, "删除");
@@ -120,7 +121,7 @@ namespace chenx.BLL
         {
             if (Log_Operating == null)
             {
-                Log_Operating = new Log_Operating_DAL();
+                Log_Operating = new Log_Operating_Add_DAL();
             }
 
             Log_Entity(s, operationType);
@@ -141,7 +142,7 @@ namespace chenx.BLL
         {
             Log_Operating.Result = status.ToString();
             Log_Operating.OperationType = operationType;
-            Log_Operating.Login_Name = "admin";
+            Log_Operating.Login_Name = User_Login_Config.UserLongInfo.LoginName;
         }
     }
 }

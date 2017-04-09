@@ -28,55 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.userNameComboBox = new System.Windows.Forms.ComboBox();
-            this.EixtButton = new System.Windows.Forms.Button();
-            this.SignInButton = new System.Windows.Forms.Button();
-            this.passwordTextBox = new System.Windows.Forms.TextBox();
+            this.Eixt_Button = new System.Windows.Forms.Button();
+            this.SignIn_Button = new System.Windows.Forms.Button();
+            this.Password_TextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.System_Title_Label = new System.Windows.Forms.Label();
+            this.UserName_TextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // userNameComboBox
+            // Eixt_Button
             // 
-            this.userNameComboBox.FormattingEnabled = true;
-            this.userNameComboBox.Items.AddRange(new object[] {
-            "admin"});
-            this.userNameComboBox.Location = new System.Drawing.Point(187, 151);
-            this.userNameComboBox.Name = "userNameComboBox";
-            this.userNameComboBox.Size = new System.Drawing.Size(164, 20);
-            this.userNameComboBox.TabIndex = 8;
+            this.Eixt_Button.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.Eixt_Button.Location = new System.Drawing.Point(311, 259);
+            this.Eixt_Button.Name = "Eixt_Button";
+            this.Eixt_Button.Size = new System.Drawing.Size(75, 37);
+            this.Eixt_Button.TabIndex = 11;
+            this.Eixt_Button.Text = "退出";
+            this.Eixt_Button.UseVisualStyleBackColor = true;
+            this.Eixt_Button.Click += new System.EventHandler(this.EixtButton_Click);
             // 
-            // EixtButton
+            // SignIn_Button
             // 
-            this.EixtButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.EixtButton.Location = new System.Drawing.Point(311, 259);
-            this.EixtButton.Name = "EixtButton";
-            this.EixtButton.Size = new System.Drawing.Size(75, 37);
-            this.EixtButton.TabIndex = 11;
-            this.EixtButton.Text = "退出";
-            this.EixtButton.UseVisualStyleBackColor = true;
-            this.EixtButton.Click += new System.EventHandler(this.EixtButton_Click);
+            this.SignIn_Button.Location = new System.Drawing.Point(116, 259);
+            this.SignIn_Button.Name = "SignIn_Button";
+            this.SignIn_Button.Size = new System.Drawing.Size(75, 37);
+            this.SignIn_Button.TabIndex = 10;
+            this.SignIn_Button.Text = "登录";
+            this.SignIn_Button.UseVisualStyleBackColor = true;
+            this.SignIn_Button.Click += new System.EventHandler(this.SignInButton_Click);
             // 
-            // SignInButton
+            // Password_TextBox
             // 
-            this.SignInButton.Location = new System.Drawing.Point(116, 259);
-            this.SignInButton.Name = "SignInButton";
-            this.SignInButton.Size = new System.Drawing.Size(75, 37);
-            this.SignInButton.TabIndex = 10;
-            this.SignInButton.Text = "登录";
-            this.SignInButton.UseVisualStyleBackColor = true;
-            this.SignInButton.Click += new System.EventHandler(this.SignInButton_Click);
-            // 
-            // passwordTextBox
-            // 
-            this.passwordTextBox.Location = new System.Drawing.Point(187, 194);
-            this.passwordTextBox.MaxLength = 28;
-            this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(164, 21);
-            this.passwordTextBox.TabIndex = 9;
-            this.passwordTextBox.Text = "123";
-            this.passwordTextBox.UseSystemPasswordChar = true;
+            this.Password_TextBox.Location = new System.Drawing.Point(187, 194);
+            this.Password_TextBox.MaxLength = 28;
+            this.Password_TextBox.Name = "Password_TextBox";
+            this.Password_TextBox.Size = new System.Drawing.Size(164, 21);
+            this.Password_TextBox.TabIndex = 9;
+            this.Password_TextBox.Text = "123";
+            this.Password_TextBox.UseSystemPasswordChar = true;
             // 
             // label2
             // 
@@ -107,16 +97,23 @@
             this.System_Title_Label.Text = "222";
             this.System_Title_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // UserName_TextBox
+            // 
+            this.UserName_TextBox.Location = new System.Drawing.Point(187, 151);
+            this.UserName_TextBox.Name = "UserName_TextBox";
+            this.UserName_TextBox.Size = new System.Drawing.Size(164, 21);
+            this.UserName_TextBox.TabIndex = 13;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(527, 365);
+            this.Controls.Add(this.UserName_TextBox);
             this.Controls.Add(this.System_Title_Label);
-            this.Controls.Add(this.userNameComboBox);
-            this.Controls.Add(this.EixtButton);
-            this.Controls.Add(this.SignInButton);
-            this.Controls.Add(this.passwordTextBox);
+            this.Controls.Add(this.Eixt_Button);
+            this.Controls.Add(this.SignIn_Button);
+            this.Controls.Add(this.Password_TextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -133,13 +130,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox userNameComboBox;
-        private System.Windows.Forms.Button EixtButton;
-        private System.Windows.Forms.Button SignInButton;
-        private System.Windows.Forms.TextBox passwordTextBox;
+        private System.Windows.Forms.Button Eixt_Button;
+        private System.Windows.Forms.Button SignIn_Button;
+        private System.Windows.Forms.TextBox Password_TextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label System_Title_Label;
+        private System.Windows.Forms.TextBox UserName_TextBox;
     }
 }
